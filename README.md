@@ -74,15 +74,19 @@ After finishing your required elements, you can push your work further. These go
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics.
 
 1. Differences between using _sessions_ or _JSON Web Tokens_ for authentication.
-
+ - Most modern systems use JSON web tokens for authentication. The main difference is that the state of the json web tokens are stored on the client side, while the state of the sessions are stored on the server side.
+ Using JSON web tokens really help with issues like scalabililty and are really helpful for mobile apps.
 
 
 2. What does `bcryptjs` do to help us store passwords in a secure manner?
-
+ - It hashes our passwords so they are kept secret from people we don't want to know our passwords. Hashes use a hash algorithm, which isn't essential to know in the case of being able to use a hash algorithm. Which in the case of bcrypt, utilizes a certain time of processing in order to have passwords and encrypting to be able to keep up with processing power.
 
 
 3. How are unit tests different from integration and end-to-end testing?
-
+ - Unit tests are for specific modules of code and are supposed to be used so that all lines of code are useful, tested and accounted for. Integration testing is used for integrating and testing the interconnectedness of different components within your system. End to end testing is used to test from the client end all the way to the server end part of the code. Unit tests are more grandular, and they should be so numerous that running every single unit test within your suite should take up too much time. Also, due to the nature of unit tests, the interconnectedness of each code part, or dependencies within each class or section, are supposed to be mocked, so that only the class itself is being tested. The downside is, that if you run all of your unit tests, the dependencies within your code base are not tested!  Which is why we need integration tests and end to end tests. Smoke tests, which are a subsection of end to end tests, are the tests we find critical to our system and we run to know if our code base is figuratively on fire, as these are the critical business aspects of our code, that if don't work, risk a critical meltdown of everything in our code base that we care about.
 
 
 4. How does _Test Driven Development_ change the way we write applications and tests?
+ - Test driven development is the method of which we write the tests first, then write the code to fulfill the tests, and then refactor the code. In this way we specify what we want the code to do, as well as cover all of the edge cases, and write the simplest code possible to fulfill that requirement.
+ It in itself feels a little backwards to write code in this way, but it drasticly decreases the amount of boilerplate code within the codebase as well as increases the speed of which we code, because we organize and think of edgecases beforehand.
+ There are also a lot of good resources and tools that work with test driven development, and help cover edge cases, things such as linters, and mutation test runners.
